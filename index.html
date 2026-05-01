@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
+<!-- saved from url=(0057)file:///Users/grahamhertz/Downloads/hertzwebco%20(1).html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hertz Web Co. — Web Design by Graham Hertz</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="./Hertz Web Co. — Web Design by Graham Hertz_files/css2" rel="stylesheet">
 <style>
   :root {
     --black: #0a0a0a;
@@ -14,747 +14,214 @@
     --mid: #6b7280;
     --border: rgba(10,10,10,0.08);
     --card: #f3f3f1;
+    --mist: #f0f0ee;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--white);
-    color: var(--black);
-    font-family: 'DM Sans', sans-serif;
-    overflow-x: hidden;
-  }
+  body { background: var(--white); color: var(--black); font-family: 'DM Sans', sans-serif; overflow-x: hidden; }
 
   /* ── NAV ── */
   nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
     padding: 1.4rem 5rem;
-    background: rgba(248,248,246,0.92);
-    backdrop-filter: blur(16px);
+    background: rgba(248,248,246,0.92); backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border);
   }
-
-  .nav-logo {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    color: var(--black);
-    text-decoration: none;
-  }
-
+  .nav-logo { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 800; letter-spacing: -0.02em; color: var(--black); text-decoration: none; }
   .nav-logo span { color: var(--accent); }
-
   .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
-
-  .nav-links a {
-    font-size: 0.82rem;
-    font-weight: 500;
-    color: var(--mid);
-    text-decoration: none;
-    transition: color 0.2s;
-    letter-spacing: 0.01em;
-  }
-
+  .nav-links a { font-size: 0.82rem; font-weight: 500; color: var(--mid); text-decoration: none; transition: color 0.2s; }
   .nav-links a:hover { color: var(--black); }
-
-  .nav-cta {
-    background: var(--black) !important;
-    color: var(--white) !important;
-    padding: 0.55rem 1.4rem;
-    border-radius: 6px;
-    font-weight: 600 !important;
-    font-size: 0.82rem !important;
-    transition: background 0.2s !important;
-  }
-
+  .nav-cta { background: var(--black) !important; color: var(--white) !important; padding: 0.55rem 1.4rem; border-radius: 6px; font-weight: 600 !important; }
   .nav-cta:hover { background: var(--accent) !important; color: var(--white) !important; }
 
   /* ── HERO ── */
-  .hero {
-    min-height: 100vh;
-    padding: 10rem 5rem 6rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-  }
+  .hero { min-height: 100vh; display: flex; align-items: center; padding: 8rem 5rem 5rem; position: relative; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 70% 50%, #dbeafe 0%, transparent 70%); pointer-events: none; }
+  .hero-content { position: relative; max-width: 680px; }
+  .hero-eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; }
+  .hero-title { font-family: 'Syne', sans-serif; font-size: clamp(2.8rem, 5.5vw, 4.5rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
+  .hero-title em { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; color: var(--accent); }
+  .hero-sub { font-size: 1.05rem; color: var(--mid); line-height: 1.75; max-width: 500px; margin-bottom: 2.5rem; font-weight: 300; }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary { background: var(--black); color: var(--white); padding: 0.9rem 2rem; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; transition: background 0.2s; }
+  .btn-primary:hover { background: var(--accent); }
+  .btn-ghost { background: transparent; color: var(--black); padding: 0.9rem 2rem; border-radius: 8px; font-size: 0.85rem; font-weight: 500; text-decoration: none; border: 1.5px solid var(--border); transition: border-color 0.2s; }
+  .btn-ghost:hover { border-color: var(--black); }
+  .hero-stats { display: flex; gap: 3rem; margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border); }
+  .stat-val { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; color: var(--black); }
+  .stat-lbl { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); margin-top: 0.2rem; }
 
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: 0; right: 0;
-    width: 55%;
-    height: 100%;
-    background: linear-gradient(135deg, var(--accent-light) 0%, rgba(248,248,246,0) 60%);
-    pointer-events: none;
-  }
-
-  .hero-grid-line {
-    position: absolute;
-    background: var(--border);
-    pointer-events: none;
-  }
-
-  .hero-grid-line.v { width: 1px; height: 100%; top: 0; }
-  .hero-grid-line.h { height: 1px; width: 100%; left: 0; }
-  .hero-grid-line:nth-child(1) { left: 33.3%; }
-  .hero-grid-line:nth-child(2) { left: 66.6%; }
-  .hero-grid-line:nth-child(3) { top: 50%; }
-
-  .hero-eyebrow {
-    font-family: 'Syne', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 2rem;
-    opacity: 1;
-    animation: fadeUp 0.7s 0.2s ease forwards;
-    position: relative;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-  }
-
-  .hero-eyebrow::before {
-    content: '';
-    width: 32px; height: 2px;
-    background: var(--accent);
-    display: inline-block;
-  }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .hero-title {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(3.5rem, 8vw, 7.5rem);
-    font-weight: 800;
-    line-height: 1.0;
-    letter-spacing: -0.04em;
-    color: var(--black);
-    margin-bottom: 0.2em;
-    opacity: 1;
-    animation: fadeUp 0.8s 0.4s ease forwards;
-    position: relative;
-    z-index: 2;
-    max-width: 900px;
-  }
-
-  .hero-title em {
-    font-family: 'Instrument Serif', serif;
-    font-style: italic;
-    font-weight: 400;
-    color: var(--accent);
-  }
-
-  .hero-subtitle {
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    font-weight: 300;
-    color: var(--mid);
-    line-height: 1.8;
-    max-width: 520px;
-    margin: 2rem 0 3rem;
-    opacity: 1;
-    animation: fadeUp 0.8s 0.6s ease forwards;
-    position: relative;
-    z-index: 2;
-  }
-
-  .hero-actions {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    opacity: 1;
-    animation: fadeUp 0.8s 0.8s ease forwards;
-    position: relative;
-    z-index: 2;
-  }
-
-  .hero-stats {
-    display: flex;
-    gap: 3rem;
-    margin-top: 5rem;
-    padding-top: 3rem;
-    border-top: 1px solid var(--border);
-    opacity: 1;
-    animation: fadeUp 0.8s 1s ease forwards;
-    position: relative;
-    z-index: 2;
-  }
-
-  .hero-stat-num {
-    font-family: 'Syne', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: var(--black);
-    letter-spacing: -0.03em;
-    line-height: 1;
-  }
-
-  .hero-stat-label {
-    font-size: 0.78rem;
-    color: var(--mid);
-    margin-top: 0.3rem;
-    font-weight: 400;
-  }
-
-  /* ── BUTTONS ── */
-  .btn-primary {
-    background: var(--black);
-    color: var(--white);
-    padding: 0.85rem 2rem;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: all 0.25s;
-    display: inline-block;
-    border-radius: 6px;
-    letter-spacing: 0.01em;
-  }
-
-  .btn-primary:hover { background: var(--accent); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,99,235,0.25); }
-
-  .btn-secondary {
-    background: transparent;
-    color: var(--black);
-    padding: 0.85rem 2rem;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-decoration: none;
-    border: 1.5px solid var(--border);
-    cursor: pointer;
-    transition: all 0.25s;
-    display: inline-block;
-    border-radius: 6px;
-  }
-
-  .btn-secondary:hover { border-color: var(--black); transform: translateY(-2px); }
+  /* ── SECTIONS ── */
+  section { padding: 6rem 5rem; }
+  .section-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+  .section-title { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1rem; }
+  .section-title em { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; }
 
   /* ── PORTFOLIO ── */
-  .portfolio {
-    padding: 8rem 5rem;
-    background: var(--white);
-  }
+  .portfolio { background: var(--white); }
+  .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+  .portfolio-card { background: var(--mist); border-radius: 16px; padding: 2rem; text-decoration: none; color: var(--black); transition: transform 0.25s, box-shadow 0.25s; border: 1px solid var(--border); }
+  .portfolio-card:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(10,10,10,0.1); }
+  .card-emoji { font-size: 2rem; margin-bottom: 1rem; }
+  .card-meta { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); margin-bottom: 0.5rem; }
+  .card-title { font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.75rem; }
+  .card-desc { font-size: 0.85rem; color: var(--mid); line-height: 1.65; margin-bottom: 1.25rem; }
+  .card-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .tag { font-size: 0.68rem; font-weight: 600; padding: 0.3rem 0.75rem; background: var(--white); border-radius: 100px; color: var(--mid); border: 1px solid var(--border); }
+  .card-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.78rem; font-weight: 600; color: var(--accent); margin-bottom: 1rem; }
 
-  .section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 4rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .section-eyebrow {
-    font-family: 'Syne', sans-serif;
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 0.8rem;
-  }
-
-  .section-title {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 800;
-    letter-spacing: -0.03em;
-    line-height: 1.1;
-    color: var(--black);
-  }
-
-  .section-title em {
-    font-family: 'Instrument Serif', serif;
-    font-style: italic;
-    font-weight: 400;
-    color: var(--accent);
-  }
-
-  .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-
-  .portfolio-card {
-    background: var(--card);
-    border-radius: 16px;
-    overflow: hidden;
-    border: 1px solid var(--border);
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-decoration: none;
-    color: inherit;
-    display: block;
-  }
-
-  .portfolio-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(10,10,10,0.1); }
-
-  .portfolio-card-preview {
-    height: 220px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 5rem;
+  /* ── PRICING ── */
+  .pricing { background: var(--black); color: var(--white); }
+  .pricing .section-label { color: #60a5fa; }
+  .pricing .section-title { color: var(--white); }
+  .pricing-subtitle { font-size: 1rem; color: rgba(255,255,255,0.5); margin-bottom: 3.5rem; font-weight: 300; max-width: 480px; }
+  .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .pricing-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 2.5rem;
     position: relative;
-    overflow: hidden;
+    transition: transform 0.25s, border-color 0.25s;
   }
-
-  .portfolio-card-preview.mexican { background: linear-gradient(135deg, #0a0806, #1a1410); }
-  .portfolio-card-preview.pho { background: linear-gradient(135deg, #f7f0e6, #e8ddd0); }
-  .portfolio-card-preview.salad { background: linear-gradient(135deg, #f0f5eb, #e0eed5); }
-  .portfolio-card-preview.cantina { background: linear-gradient(135deg, #d42b1e, #7a1a10); }
-
-  .portfolio-card-preview-label {
-    position: absolute;
-    top: 1rem; right: 1rem;
-    background: rgba(255,255,255,0.15);
-    backdrop-filter: blur(8px);
-    color: white;
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    padding: 0.3rem 0.8rem;
-    border-radius: 100px;
+  .pricing-card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.25); }
+  .pricing-card.featured {
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: scale(1.03);
   }
-
-  .portfolio-card-preview.pho .portfolio-card-preview-label,
-  .portfolio-card-preview.salad .portfolio-card-preview-label {
-    color: var(--black);
-    background: rgba(0,0,0,0.1);
+  .pricing-card.featured:hover { transform: scale(1.03) translateY(-4px); }
+  .featured-badge {
+    position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+    background: #fbbf24; color: #0a0a0a;
+    font-size: 0.65rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 0.3rem 1rem; border-radius: 100px;
   }
-
-  .portfolio-card-body { padding: 1.8rem 2rem; }
-
-  .portfolio-card-tag {
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 0.5rem;
+  .tier-name { font-family: 'Syne', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.75rem; }
+  .pricing-card.featured .tier-name { color: rgba(255,255,255,0.75); }
+  .tier-price { font-family: 'Syne', sans-serif; font-size: 3rem; font-weight: 800; color: var(--white); line-height: 1; margin-bottom: 0.3rem; }
+  .tier-price sup { font-size: 1.4rem; font-weight: 600; vertical-align: top; margin-top: 0.5rem; }
+  .tier-desc { font-size: 0.78rem; color: rgba(255,255,255,0.45); margin-bottom: 2rem; font-weight: 300; }
+  .pricing-card.featured .tier-desc { color: rgba(255,255,255,0.7); }
+  .tier-features { list-style: none; margin-bottom: 2.5rem; display: flex; flex-direction: column; gap: 0.85rem; }
+  .tier-features li { font-size: 0.85rem; color: rgba(255,255,255,0.75); display: flex; align-items: flex-start; gap: 0.6rem; line-height: 1.4; }
+  .pricing-card.featured .tier-features li { color: rgba(255,255,255,0.9); }
+  .tier-features li::before { content: '✓'; color: #4ade80; font-weight: 700; font-size: 0.8rem; flex-shrink: 0; margin-top: 0.05rem; }
+  .pricing-card.featured .tier-features li::before { color: #a7f3d0; }
+  .tier-btn {
+    display: block; width: 100%; text-align: center;
+    background: rgba(255,255,255,0.1); color: var(--white);
+    padding: 0.9rem; border-radius: 10px;
+    font-size: 0.82rem; font-weight: 700; text-decoration: none;
+    letter-spacing: 0.04em; transition: background 0.2s;
   }
+  .tier-btn:hover { background: rgba(255,255,255,0.2); }
+  .pricing-card.featured .tier-btn { background: var(--white); color: var(--accent); }
+  .pricing-card.featured .tier-btn:hover { background: rgba(255,255,255,0.9); }
 
-  .portfolio-card-name {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--black);
-    margin-bottom: 0.4rem;
-    letter-spacing: -0.02em;
+  /* ── SERVICE PLAN ── */
+  .service-plan {
+    margin-top: 2rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px dashed rgba(255,255,255,0.15);
+    border-radius: 16px;
+    padding: 2rem 2.5rem;
+    display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;
   }
-
-  .portfolio-card-desc {
-    font-size: 0.85rem;
-    color: var(--mid);
-    line-height: 1.6;
-    margin-bottom: 1.2rem;
-  }
-
-  .portfolio-card-features {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
-
-  .feature-tag {
-    background: var(--white);
-    border: 1px solid var(--border);
-    color: var(--mid);
-    font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 0.25rem 0.7rem;
-    border-radius: 100px;
-  }
+  .plan-left { }
+  .plan-badge { display: inline-block; background: #fbbf24; color: #0a0a0a; font-size: 0.65rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.25rem 0.75rem; border-radius: 100px; margin-bottom: 0.75rem; }
+  .plan-title { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 800; color: var(--white); margin-bottom: 0.3rem; }
+  .plan-price { font-size: 0.9rem; color: rgba(255,255,255,0.45); }
+  .plan-price strong { color: var(--white); font-size: 1.5rem; font-family: 'Syne', sans-serif; }
+  .plan-features { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+  .plan-feature { font-size: 0.78rem; color: rgba(255,255,255,0.65); display: flex; align-items: center; gap: 0.4rem; }
+  .plan-feature::before { content: '→'; color: #60a5fa; }
 
   /* ── ABOUT ── */
-  .about {
-    padding: 8rem 5rem;
-    background: var(--black);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .about::before {
-    content: 'GH';
-    position: absolute;
-    right: 3rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-family: 'Syne', sans-serif;
-    font-size: 20rem;
-    font-weight: 800;
-    color: rgba(248,248,246,0.02);
-    pointer-events: none;
-    letter-spacing: -0.05em;
-    line-height: 1;
-  }
-
-  .about-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 7rem;
-    align-items: center;
-  }
-
-  .about-card {
-    background: rgba(248,248,246,0.04);
-    border: 1px solid rgba(248,248,246,0.08);
-    border-radius: 20px;
-    padding: 3rem;
-    position: relative;
-  }
-
-  .about-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(to right, var(--accent), transparent);
-    border-radius: 20px 20px 0 0;
-  }
-
-  .about-avatar {
-    width: 80px; height: 80px;
-    background: linear-gradient(135deg, var(--accent), #1d4ed8);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Syne', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: white;
-    margin-bottom: 1.5rem;
-  }
-
-  .about-card-name {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: var(--white);
-    letter-spacing: -0.02em;
-    margin-bottom: 0.3rem;
-  }
-
-  .about-card-title {
-    font-size: 0.78rem;
-    font-weight: 500;
-    color: var(--accent);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
-  }
-
-  .about-badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1.5rem;
-  }
-
-  .about-badge {
-    background: rgba(248,248,246,0.06);
-    border: 1px solid rgba(248,248,246,0.1);
-    color: rgba(248,248,246,0.7);
-    font-size: 0.7rem;
-    font-weight: 600;
-    padding: 0.3rem 0.8rem;
-    border-radius: 100px;
-    letter-spacing: 0.05em;
-  }
-
-  .about-eyebrow {
-    font-family: 'Syne', sans-serif;
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 1.2rem;
-  }
-
-  .about-title {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 800;
-    letter-spacing: -0.03em;
-    line-height: 1.1;
-    color: var(--white);
-    margin-bottom: 1.8rem;
-  }
-
-  .about-title em {
-    font-family: 'Instrument Serif', serif;
-    font-style: italic;
-    font-weight: 400;
-    color: var(--accent);
-  }
-
-  .about-body {
-    font-size: 1rem;
-    font-weight: 300;
-    color: rgba(248,248,246,0.6);
-    line-height: 1.9;
-    margin-bottom: 1.2rem;
-  }
+  .about { background: var(--mist); }
+  .about-inner { display: grid; grid-template-columns: 1fr 1.6fr; gap: 5rem; align-items: center; }
+  .about-card { background: var(--white); border-radius: 20px; padding: 2.5rem; border: 1px solid var(--border); text-align: center; }
+  .about-avatar { width: 72px; height: 72px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-weight: 800; color: white; font-size: 1.2rem; margin: 0 auto 1.25rem; }
+  .about-name { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; margin-bottom: 0.25rem; }
+  .about-role { font-size: 0.75rem; color: var(--mid); margin-bottom: 1.5rem; letter-spacing: 0.05em; }
+  .about-badges { display: flex; flex-direction: column; gap: 0.6rem; text-align: left; }
+  .about-badge { font-size: 0.82rem; color: var(--mid); display: flex; align-items: center; gap: 0.6rem; }
+  .about-text p { font-size: 1rem; color: var(--mid); line-height: 1.8; margin-bottom: 1.25rem; font-weight: 300; }
+  .about-text p:last-child { margin-bottom: 0; }
 
   /* ── PROCESS ── */
-  .process {
-    padding: 8rem 5rem;
-    background: var(--white);
-  }
-
-  .process-inner { max-width: 1200px; margin: 0 auto; }
-
-  .process-steps {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    margin-top: 4rem;
-    position: relative;
-  }
-
-  .process-steps::before {
-    content: '';
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-    right: 2rem;
-    height: 1px;
-    background: var(--border);
-    z-index: 0;
-  }
-
-  .process-step { position: relative; z-index: 1; }
-
-  .step-number {
-    width: 40px; height: 40px;
-    background: var(--white);
-    border: 1.5px solid var(--border);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Syne', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 800;
-    color: var(--accent);
-    margin-bottom: 1.5rem;
-    transition: all 0.3s;
-  }
-
-  .process-step:hover .step-number { background: var(--accent); border-color: var(--accent); color: white; }
-
-  .step-title {
-    font-family: 'Syne', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--black);
-    margin-bottom: 0.6rem;
-    letter-spacing: -0.01em;
-  }
-
-  .step-desc { font-size: 0.88rem; color: var(--mid); line-height: 1.7; font-weight: 300; }
+  .process { background: var(--white); }
+  .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 3rem; }
+  .process-step { }
+  .step-num { font-family: 'Syne', sans-serif; font-size: 3rem; font-weight: 800; color: var(--accent-light); line-height: 1; margin-bottom: 1rem; }
+  .step-title { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.6rem; }
+  .step-desc { font-size: 0.85rem; color: var(--mid); line-height: 1.65; }
 
   /* ── CONTACT ── */
-  .contact {
-    padding: 8rem 5rem;
-    background: var(--card);
-    border-top: 1px solid var(--border);
+  .contact { background: var(--mist); }
+  .contact-inner { display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; }
+  .contact-info { }
+  .contact-item { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; text-decoration: none; color: var(--black); }
+  .contact-icon { width: 44px; height: 44px; background: var(--white); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; border: 1px solid var(--border); flex-shrink: 0; }
+  .contact-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); margin-bottom: 0.2rem; }
+  .contact-val { font-size: 0.9rem; font-weight: 500; }
+  .contact-form { background: var(--white); border-radius: 20px; padding: 2.5rem; border: 1px solid var(--border); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+  .form-group { margin-bottom: 1rem; }
+  .form-group label { display: block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--mid); margin-bottom: 0.5rem; }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%; padding: 0.8rem 1rem; border: 1.5px solid var(--border); border-radius: 8px;
+    font-family: 'DM Sans', sans-serif; font-size: 0.88rem; color: var(--black);
+    background: var(--white); transition: border-color 0.2s; outline: none;
   }
-
-  .contact-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 7rem;
-    align-items: start;
-  }
-
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-  }
-
-  .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
-
-  .form-label {
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--mid);
-  }
-
-  .form-input, .form-textarea, .form-select {
-    background: var(--white);
-    border: 1.5px solid var(--border);
-    border-radius: 8px;
-    padding: 0.85rem 1rem;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.95rem;
-    color: var(--black);
-    transition: border-color 0.2s, box-shadow 0.2s;
-    outline: none;
-    width: 100%;
-    appearance: none;
-  }
-
-  .form-input:focus, .form-textarea:focus, .form-select:focus {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
-  }
-
-  .form-textarea { height: 140px; resize: vertical; }
-
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-
-  .form-submit {
-    background: var(--black);
-    color: var(--white);
-    padding: 1rem 2rem;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    transition: all 0.25s;
-    border-radius: 8px;
-    letter-spacing: 0.01em;
-    margin-top: 0.5rem;
-  }
-
-  .form-submit:hover { background: var(--accent); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,99,235,0.25); }
-
-  .contact-info-block {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 2rem;
-    margin-bottom: 1.2rem;
-    display: flex;
-    align-items: flex-start;
-    gap: 1.2rem;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-
-  .contact-info-block:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(10,10,10,0.08); }
-
-  .contact-info-icon {
-    width: 44px; height: 44px;
-    background: var(--accent-light);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    flex-shrink: 0;
-  }
-
-  .contact-info-label {
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--mid);
-    margin-bottom: 0.3rem;
-  }
-
-  .contact-info-value {
-    font-family: 'Syne', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--black);
-  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--accent); }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .form-submit { width: 100%; background: var(--black); color: var(--white); padding: 1rem; border-radius: 8px; font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 700; border: none; cursor: pointer; transition: background 0.2s; letter-spacing: 0.04em; }
+  .form-submit:hover { background: var(--accent); }
 
   /* ── FOOTER ── */
-  footer {
-    background: var(--black);
-    padding: 2.5rem 5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
+  footer { background: var(--black); color: rgba(255,255,255,0.4); padding: 3rem 5rem; display: flex; justify-content: space-between; align-items: center; }
+  .footer-logo { font-family: 'Syne', sans-serif; font-weight: 800; color: var(--white); font-size: 1rem; }
+  .footer-logo span { color: #60a5fa; }
+  .footer-copy { font-size: 0.78rem; }
 
-  .footer-logo {
-    font-family: 'Syne', sans-serif;
-    font-size: 1rem;
-    font-weight: 800;
-    color: var(--white);
-    letter-spacing: -0.02em;
-  }
+  /* ── CHAT BUBBLE ── */
+  #chat-bubble { position: fixed; bottom: 2rem; left: 2rem; z-index: 500; }
+  #chat-toggle { width: 56px; height: 56px; background: var(--accent); border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,99,235,0.4); font-size: 1.4rem; transition: transform 0.2s, box-shadow 0.2s; }
+  #chat-toggle:hover { transform: scale(1.1); box-shadow: 0 8px 30px rgba(37,99,235,0.5); }
+  #chat-panel { display: none; position: absolute; bottom: 70px; left: 0; width: 280px; background: var(--white); border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 20px 60px rgba(10,10,10,0.15); overflow: hidden; }
+  .chat-header { background: var(--accent); padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 0.8rem; }
+  .chat-avatar { width: 36px; height: 36px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-weight: 800; color: white; font-size: 0.85rem; }
+  .chat-name { font-family: 'Syne', sans-serif; font-weight: 700; color: white; font-size: 0.9rem; }
+  .chat-status { font-size: 0.7rem; color: rgba(255,255,255,0.8); }
+  .chat-body { padding: 1.5rem; }
+  .chat-bubble-msg { background: var(--mist); border-radius: 12px 12px 12px 4px; padding: 0.9rem 1.1rem; font-size: 0.88rem; color: var(--black); line-height: 1.6; margin-bottom: 1.2rem; }
+  .chat-actions { display: flex; flex-direction: column; gap: 0.6rem; }
+  .chat-action { display: flex; align-items: center; gap: 0.6rem; padding: 0.75rem 1rem; background: var(--mist); border-radius: 10px; text-decoration: none; color: var(--black); font-size: 0.82rem; font-weight: 500; transition: background 0.2s; }
+  .chat-action:hover { background: var(--accent-light); }
 
-  .footer-logo span { color: var(--accent); }
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
 
-  .footer-copy { font-size: 0.75rem; color: rgba(248,248,246,0.3); letter-spacing: 0.05em; }
-
-  .footer-tagline { font-size: 0.8rem; color: rgba(248,248,246,0.35); font-style: italic; font-family: 'Instrument Serif', serif; }
-
-  /* ── REVEAL ── */
-  .reveal { opacity: 1; transform: translateY(0); transition: opacity 0.7s ease, transform 0.7s ease; }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
-  .reveal-delay-1 { transition-delay: 0.1s; }
-  .reveal-delay-2 { transition-delay: 0.2s; }
-  .reveal-delay-3 { transition-delay: 0.3s; }
-
-  /* Smooth section transitions */
-  section, .portfolio, .about, .process, .contact {
-    transition: opacity 0.5s ease;
-  }
-
-  /* Smooth link transitions */
-  a, button { transition: all 0.25s ease; }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(16px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  /* ── RESPONSIVE ── */
+  /* ── MOBILE ── */
   @media (max-width: 900px) {
     nav { padding: 1.2rem 2rem; }
     .nav-links { display: none; }
-    .hero { padding: 8rem 2rem 4rem; }
-    .hero-stats { gap: 2rem; flex-wrap: wrap; }
-    .portfolio { padding: 5rem 2rem; }
-    .portfolio-grid { grid-template-columns: 1fr; }
-    .about { padding: 5rem 2rem; }
-    .about-inner { grid-template-columns: 1fr; gap: 3rem; }
-    .process { padding: 5rem 2rem; }
-    .process-steps { grid-template-columns: 1fr 1fr; }
-    .process-steps::before { display: none; }
-    .contact { padding: 5rem 2rem; }
-    .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
-    footer { padding: 2rem; flex-direction: column; text-align: center; }
+    section { padding: 4rem 2rem; }
+    .hero { padding: 7rem 2rem 4rem; }
+    .pricing-grid { grid-template-columns: 1fr; }
+    .pricing-card.featured { transform: none; }
+    .about-inner, .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .process-grid { grid-template-columns: 1fr 1fr; }
     .form-row { grid-template-columns: 1fr; }
-    .section-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem; }
+    .hero-stats { gap: 2rem; }
+    .service-plan { flex-direction: column; }
   }
 </style>
 </head>
@@ -762,249 +229,299 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">Hertz<span>Web</span>Co.</a>
+  <a href="file:///Users/grahamhertz/Downloads/hertzwebco%20(1).html#" class="nav-logo">Hertz<span>Web</span>Co.</a>
   <ul class="nav-links">
-    <li><a href="#portfolio">Work</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#process">Process</a></li>
-    <li><a href="#contact" class="nav-cta">Get a Site</a></li>
+    <li><a href="file:///Users/grahamhertz/Downloads/hertzwebco%20(1).html#portfolio">Work</a></li>
+    <li><a href="file:///Users/grahamhertz/Downloads/hertzwebco%20(1).html#pricing">Pricing</a></li>
+    <li><a href="file:///Users/grahamhertz/Downloads/hertzwebco%20(1).html#about">About</a></li>
+    <li><a href="file:///Users/grahamhertz/Downloads/hertzwebco%20(1).html#process">Process</a></li>
+    <li><a href="file:///Users/grahamhertz/Downloads/hertzwebco%20(1).html#contact" class="nav-cta">Get a Site</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-grid-line v"></div>
-  <div class="hero-grid-line v"></div>
-  <div class="hero-grid-line h"></div>
-
-  <p class="hero-eyebrow">Web Design · Walnut Creek & Beyond</p>
-  <h1 class="hero-title">Your business deserves a <em>website that works.</em></h1>
-  <p class="hero-subtitle">Professional, mobile-ready websites built fast — for restaurants, local businesses, and anyone who needs a real online presence. Big or small, I build it all. No templates. No fluff. Just results.</p>
-  <div class="hero-actions">
-    <a href="#portfolio" class="btn-primary">See My Work</a>
-    <a href="#contact" class="btn-secondary">Get a Free Quote</a>
-  </div>
-  <div class="hero-stats">
-    <div>
-      <div class="hero-stat-num">3</div>
-      <div class="hero-stat-label">Sites Built & Live</div>
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Web Design · Walnut Creek &amp; Beyond</p>
+    <h1 class="hero-title">Your business deserves a <em>website that works.</em></h1>
+    <p class="hero-sub">Professional, mobile-ready websites built fast — for restaurants, local businesses, and anyone who needs a real online presence. No templates. No fluff. Just results.</p>
+    <div class="hero-btns">
+      <a href="file:///Users/grahamhertz/Downloads/hertzwebco%20(1).html#portfolio" class="btn-primary">See My Work</a>
+      <a href="file:///Users/grahamhertz/Downloads/hertzwebco%20(1).html#contact" class="btn-ghost">Get a Free Quote</a>
     </div>
-    <div>
-      <div class="hero-stat-num">100%</div>
-      <div class="hero-stat-label">Mobile Optimized</div>
-    </div>
-    <div>
-      <div class="hero-stat-num">Fast</div>
-      <div class="hero-stat-label">Turnaround Time</div>
-    </div>
-    <div>
-      <div class="hero-stat-num">$0</div>
-      <div class="hero-stat-label">To Get a Quote</div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-val">6+</div>
+        <div class="stat-lbl">Sites Built &amp; Live</div>
+      </div>
+      <div>
+        <div class="stat-val">100%</div>
+        <div class="stat-lbl">Mobile Optimized</div>
+      </div>
+      <div>
+        <div class="stat-val">Fast</div>
+        <div class="stat-lbl">Turnaround Time</div>
+      </div>
+      <div>
+        <div class="stat-val">$0</div>
+        <div class="stat-lbl">To Get a Quote</div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- PORTFOLIO -->
-<section id="portfolio" class="portfolio">
-  <div class="section-header reveal">
-    <div>
-      <p class="section-eyebrow">Portfolio</p>
-      <h2 class="section-title">Real sites. <em>Real clients.</em></h2>
+<section class="portfolio" id="portfolio">
+  <p class="section-label">Portfolio</p>
+  <h2 class="section-title">Real sites. <em>Real clients.</em></h2>
+  <div class="portfolio-grid">
+    <a href="https://grahamhertz7-stack.github.io/Pachecos/" target="_blank" class="portfolio-card fade-up visible">
+      <div class="card-emoji">🌮</div>
+      <div class="card-link">Live Site ↗</div>
+      <div class="card-meta">Mexican Restaurant · Pacheco, CA</div>
+      <div class="card-title">Pacheco's Mexican Grill</div>
+      <div class="card-desc">Dark luxury branding with bilingual EN/ES support, scrolling marquee, click-to-call, and Google Maps integration.</div>
+      <div class="card-tags">
+        <span class="tag">Bilingual</span><span class="tag">Mobile Ready</span><span class="tag">Click to Call</span><span class="tag">Directions</span>
+      </div>
+    </a>
+    <a href="https://grahamhertz7-stack.github.io/phosam/" target="_blank" class="portfolio-card fade-up visible">
+      <div class="card-emoji">🍜</div>
+      <div class="card-link">Live Site ↗</div>
+      <div class="card-meta">Vietnamese Restaurant · San Ramon, CA</div>
+      <div class="card-title">Pho Sam</div>
+      <div class="card-desc">Warm, soulful design with full English &amp; Vietnamese toggle, animated steam effects, and dual menu links.</div>
+      <div class="card-tags">
+        <span class="tag">EN / VI</span><span class="tag">Animations</span><span class="tag">Mobile Ready</span><span class="tag">Reviews</span>
+      </div>
+    </a>
+    <a href="https://grahamhertz7-stack.github.io/ARLE/" target="_blank" class="portfolio-card fade-up visible">
+      <div class="card-emoji">🌽</div>
+      <div class="card-link">Live Site ↗</div>
+      <div class="card-meta">Oaxacan Restaurant · Concord, CA</div>
+      <div class="card-title">ARLE Mexican/Oaxacan</div>
+      <div class="card-desc">Bold dark design with terracotta &amp; gold branding, bilingual EN/ES, click-to-call, Google Maps, and menu integration.</div>
+      <div class="card-tags">
+        <span class="tag">Bilingual</span><span class="tag">Bold Design</span><span class="tag">Click to Call</span><span class="tag">5.0 ⭐</span>
+      </div>
+    </a>
+    <a href="https://hertzcommercialre.com/" target="_blank" class="portfolio-card fade-up visible">
+      <div class="card-emoji">🏢</div>
+      <div class="card-link">Live Site ↗</div>
+      <div class="card-meta">Commercial Real Estate · Walnut Creek, CA</div>
+      <div class="card-title">Hertz Commercial RE</div>
+      <div class="card-desc">Dark luxury branding for Cushman &amp; Wakefield brokers Mitch &amp; Josh Hertz. AI hero video, cinematic animations, ElevenLabs AI assistant, and notable deals showcase.</div>
+      <div class="card-tags">
+        <span class="tag">AI Video</span><span class="tag">AI Assistant</span><span class="tag">Luxury Design</span><span class="tag">Animations</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <p class="section-label">Pricing</p>
+  <h2 class="section-title">Simple, honest <em>pricing.</em></h2>
+  <p class="pricing-subtitle">No hidden fees. No surprise invoices. Pick your tier, and I handle everything — design, build, and launch.</p>
+
+  <div class="pricing-grid">
+    <!-- Essential -->
+    <div class="pricing-card fade-up visible">
+      <div class="tier-name">Essential</div>
+      <div class="tier-price"><sup>$</sup>399</div>
+      <div class="tier-desc">Clean, fast, and ready to launch.</div>
+      <ul class="tier-features">
+        <li>Single page website</li>
+        <li>Mobile responsive design</li>
+        <li>Click-to-call &amp; hours</li>
+        <li>Menu &amp; delivery links</li>
+        <li>Free hosting included</li>
+        <li>Delivered in 5–7 days</li>
+      </ul>
+      <a href="file:///Users/grahamhertz/Downloads/hertzwebco%20(1).html#contact" class="tier-btn">Get Started →</a>
+    </div>
+
+    <!-- Pro -->
+    <div class="pricing-card featured fade-up visible">
+      <div class="featured-badge">Most Popular</div>
+      <div class="tier-name">Pro</div>
+      <div class="tier-price"><sup>$</sup>699</div>
+      <div class="tier-desc">Everything you need to stand out.</div>
+      <ul class="tier-features">
+        <li>Everything in Essential</li>
+        <li>Multi-section layout</li>
+        <li>About, Gallery &amp; Contact</li>
+        <li>Custom animations &amp; design</li>
+        <li>Google Business Profile setup</li>
+        <li>Free hosting included</li>
+        <li>Delivered in 7–10 days</li>
+      </ul>
+      <a href="file:///Users/grahamhertz/Downloads/hertzwebco%20(1).html#contact" class="tier-btn">Get Started →</a>
+    </div>
+
+    <!-- Elite -->
+    <div class="pricing-card fade-up visible">
+      <div class="tier-name">Elite</div>
+      <div class="tier-price"><sup>$</sup>999</div>
+      <div class="tier-desc">The full luxury experience.</div>
+      <ul class="tier-features">
+        <li>Everything in Pro</li>
+        <li>AI hero video</li>
+        <li>AI assistant setup for site &amp; business</li>
+        <li>Bilingual (EN/ES or EN/VI)</li>
+        <li>1 free revision after launch</li>
+        <li>Priority turnaround (3–5 days)</li>
+        <li>Free hosting included</li>
+      </ul>
+      <a href="file:///Users/grahamhertz/Downloads/hertzwebco%20(1).html#contact" class="tier-btn">Get Started →</a>
     </div>
   </div>
-  <div class="portfolio-grid">
-    <a href="https://grahamhertz7-stack.github.io/Pachecos/" target="_blank" class="portfolio-card reveal">
-      <div class="portfolio-card-preview mexican">
-        <span>🌮</span>
-        <div class="portfolio-card-preview-label">Live Site ↗</div>
-      </div>
-      <div class="portfolio-card-body">
-        <div class="portfolio-card-tag">Mexican Restaurant · Pacheco, CA</div>
-        <div class="portfolio-card-name">Pacheco's Mexican Grill</div>
-        <p class="portfolio-card-desc">Dark luxury branding with bilingual EN/ES support, scrolling marquee, click-to-call, and Google Maps integration.</p>
-        <div class="portfolio-card-features">
-          <span class="feature-tag">Bilingual</span>
-          <span class="feature-tag">Mobile Ready</span>
-          <span class="feature-tag">Click to Call</span>
-          <span class="feature-tag">Directions</span>
-        </div>
-      </div>
-    </a>
-    <a href="https://grahamhertz7-stack.github.io/phosam/" target="_blank" class="portfolio-card reveal reveal-delay-1">
-      <div class="portfolio-card-preview pho">
-        <span>🍜</span>
-        <div class="portfolio-card-preview-label">Live Site ↗</div>
-      </div>
-      <div class="portfolio-card-body">
-        <div class="portfolio-card-tag">Vietnamese Restaurant · San Ramon, CA</div>
-        <div class="portfolio-card-name">Pho Sam</div>
-        <p class="portfolio-card-desc">Warm, soulful design with full English & Vietnamese toggle, animated steam effects, and dual menu links.</p>
-        <div class="portfolio-card-features">
-          <span class="feature-tag">EN / VI</span>
-          <span class="feature-tag">Animations</span>
-          <span class="feature-tag">Mobile Ready</span>
-          <span class="feature-tag">Reviews</span>
-        </div>
-      </div>
-    </a>
-    <a href="https://grahamhertz7-stack.github.io/ARLE/" target="_blank" class="portfolio-card reveal">
-      <div class="portfolio-card-preview" style="background: linear-gradient(135deg, #0f0a05, #1c1108);">
-        <span>🌽</span>
-        <div class="portfolio-card-preview-label" style="color:white;">Live Site ↗</div>
-      </div>
-      <div class="portfolio-card-body">
-        <div class="portfolio-card-tag">Oaxacan Restaurant · Concord, CA</div>
-        <div class="portfolio-card-name">ARLE Mexican/Oaxacan</div>
-        <p class="portfolio-card-desc">Bold dark design with terracotta & gold branding, bilingual EN/ES, click-to-call, Google Maps, and menu integration.</p>
-        <div class="portfolio-card-features">
-          <span class="feature-tag">Bilingual</span>
-          <span class="feature-tag">Bold Design</span>
-          <span class="feature-tag">Click to Call</span>
-          <span class="feature-tag">5.0 ⭐</span>
-        </div>
-      </div>
-    </a>
 
+  <!-- Service Plan -->
+  <div class="service-plan">
+    <div class="plan-left">
+      <div class="plan-badge">Add-On</div>
+      <div class="plan-title">Monthly Service Plan</div>
+      <div class="plan-price"><strong>$50</strong> / month — available with any tier</div>
+    </div>
+    <div class="plan-features">
+      <div class="plan-feature">Text &amp; copy updates</div>
+      <div class="plan-feature">Photo swaps</div>
+      <div class="plan-feature">Menu &amp; hours changes</div>
+      <div class="plan-feature">Google Business Profile optimization</div>
+      <div class="plan-feature">Monthly SEO report</div>
+      <div class="plan-feature">Priority support</div>
+    </div>
+    <a href="file:///Users/grahamhertz/Downloads/hertzwebco%20(1).html#contact" class="tier-btn" style="width:auto;padding:0.9rem 2rem;background:rgba(255,255,255,0.1);white-space:nowrap;">Add to My Plan →</a>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="about">
+<section class="about" id="about">
   <div class="about-inner">
-    <div class="reveal">
+    <div>
       <div class="about-card">
         <div class="about-avatar">GH</div>
-        <div class="about-card-name">Graham Hertz</div>
-        <div class="about-card-title">Founder · Hertz Web Co.</div>
-        <p style="font-size:0.9rem; color:rgba(248,248,246,0.55); line-height:1.7; font-weight:300;">17 years old. Monte Vista High School. Building websites for local businesses across the Bay Area.</p>
+        <div class="about-name">Graham Hertz</div>
+        <div class="about-role">Founder · Hertz Web Co.</div>
         <div class="about-badges">
-          <span class="about-badge">🎓 Monte Vista HS</span>
-          <span class="about-badge">🍽️ Roundhill Country Club</span>
-          <span class="about-badge">🏓 PHYR Pickleball</span>
-          <span class="about-badge">✨ LuxWash Co.</span>
+          <div class="about-badge">🎓 Monte Vista High School</div>
+          <div class="about-badge">🍽️ Roundhill Country Club</div>
+          <div class="about-badge">🏓 PHYR Pickleball</div>
+          <div class="about-badge">✨ LuxWash Co.</div>
         </div>
       </div>
     </div>
-    <div class="reveal reveal-delay-1">
-      <p class="about-eyebrow">About Me</p>
-      <h2 class="about-title">17 years old.<br><em>Getting it done.</em></h2>
-      <p class="about-body">I noticed a problem. Small businesses — restaurants, food trucks, local spots — had amazing food but nothing online to back it up. No website, no presence, nothing. Customers couldn't find them, and they were losing business because of it.</p>
-      <p class="about-body">So I started building websites for them. Luxury websites at a not-so-luxury price. Big or small — restaurants, taco trucks, service businesses, anything — every site I make is custom, mobile-ready, bilingual if needed, and built to actually represent the business properly.</p>
-      <p class="about-body">I'm 17, I go to Monte Vista High School, and I work at Roundhill Country Club. I'm also sponsored by PHYR Pickleball and do sales for LuxWash Co. I stay busy — and I bring that same work ethic to every site I build.</p>
-      <a href="#contact" class="btn-primary" style="margin-top:1rem; background:var(--accent);">Work With Me</a>
+    <div class="about-text">
+      <p class="section-label">About Me</p>
+      <h2 class="section-title">17 years old. <em>Getting it done.</em></h2>
+      <p>I noticed a problem. Small businesses — restaurants, food trucks, local spots — had amazing food but nothing online to back it up. No website, no presence, nothing. Customers couldn't find them, and they were losing business because of it.</p>
+      <p>So I started building websites for them. Luxury websites at a not-so-luxury price. Every site I make is custom, mobile-ready, bilingual if needed, and built to actually represent the business properly.</p>
+      <p>I'm 17, I go to Monte Vista High School, and I work at Roundhill Country Club. I'm also sponsored by PHYR Pickleball and do sales for LuxWash Co. I stay busy — and I bring that same work ethic to every site I build.</p>
+      <br>
+      <a href="file:///Users/grahamhertz/Downloads/hertzwebco%20(1).html#contact" class="btn-primary">Work With Me</a>
     </div>
   </div>
 </section>
 
 <!-- PROCESS -->
-<section id="process" class="process">
-  <div class="process-inner">
-    <div class="section-header reveal">
-      <div>
-        <p class="section-eyebrow">How It Works</p>
-        <h2 class="section-title">Simple. Fast. <em>Done right.</em></h2>
-      </div>
+<section class="process" id="process">
+  <p class="section-label">How It Works</p>
+  <h2 class="section-title">Simple. Fast. <em>Done right.</em></h2>
+  <div class="process-grid">
+    <div class="process-step fade-up visible">
+      <div class="step-num">01</div>
+      <div class="step-title">You reach out</div>
+      <div class="step-desc">Fill out the contact form or send me a message. Tell me about your business — I'll get back to you fast.</div>
     </div>
-    <div class="process-steps">
-      <div class="process-step reveal">
-        <div class="step-number">01</div>
-        <div class="step-title">You reach out</div>
-        <p class="step-desc">Fill out the contact form or send me a message. Tell me about your business — I'll get back to you fast.</p>
-      </div>
-      <div class="process-step reveal reveal-delay-1">
-        <div class="step-number">02</div>
-        <div class="step-title">We talk it through</div>
-        <p class="step-desc">We discuss your brand, your customers, and what you need. No jargon — just a straightforward conversation.</p>
-      </div>
-      <div class="process-step reveal reveal-delay-2">
-        <div class="step-number">03</div>
-        <div class="step-title">I build it</div>
-        <p class="step-desc">I design and build your custom site — mobile-ready, fast-loading, and built to convert visitors into customers.</p>
-      </div>
-      <div class="process-step reveal reveal-delay-3">
-        <div class="step-number">04</div>
-        <div class="step-title">You go live</div>
-        <p class="step-desc">Your site goes live with a real URL. I handle everything — you just share the link and start getting customers.</p>
-      </div>
+    <div class="process-step fade-up visible">
+      <div class="step-num">02</div>
+      <div class="step-title">We talk it through</div>
+      <div class="step-desc">We discuss your brand, your customers, and what you need. No jargon — just a straightforward conversation.</div>
+    </div>
+    <div class="process-step fade-up visible">
+      <div class="step-num">03</div>
+      <div class="step-title">I build it</div>
+      <div class="step-desc">I design and build your custom site — mobile-ready, fast-loading, and built to convert visitors into customers.</div>
+    </div>
+    <div class="process-step fade-up visible">
+      <div class="step-num">04</div>
+      <div class="step-title">You go live</div>
+      <div class="step-desc">Your site goes live with a real URL. I handle everything — you just share the link and start getting customers.</div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact">
+<section class="contact" id="contact">
   <div class="contact-inner">
-    <div class="reveal">
-      <p class="section-eyebrow">Get In Touch</p>
-      <h2 class="section-title" style="margin-bottom:1.5rem;">Let's build your <em>website.</em></h2>
-      <p style="font-size:1rem; color:var(--mid); line-height:1.8; margin-bottom:2.5rem; font-weight:300;">Ready to get your business online? Fill out the form and I'll get back to you within 24 hours — guaranteed.</p>
-
-      <a href="tel:+19258768014" class="contact-info-block" style="text-decoration:none;">
-        <div class="contact-info-icon">📞</div>
+    <div class="contact-info">
+      <p class="section-label">Get In Touch</p>
+      <h2 class="section-title">Let's build your <em>website.</em></h2>
+      <p style="font-size:0.95rem;color:var(--mid);line-height:1.75;margin-bottom:2.5rem;font-weight:300;">Ready to get your business online? Fill out the form and I'll get back to you within 24 hours — guaranteed.</p>
+      <a href="tel:+19258768014" class="contact-item">
+        <div class="contact-icon">📞</div>
         <div>
-          <div class="contact-info-label">Phone</div>
-          <div class="contact-info-value">(925) 876-8014</div>
+          <div class="contact-label">Phone</div>
+          <div class="contact-val">(925) 876-8014</div>
         </div>
       </a>
-      <a href="/cdn-cgi/l/email-protection#d0b7a2b1b8b1bdb8b5a2a4aae790b7bdb1b9bcfeb3bfbd" class="contact-info-block" style="text-decoration:none;">
-        <div class="contact-info-icon">✉️</div>
+      <a href="mailto:grahamhertz7@gmail.com" class="contact-item">
+        <div class="contact-icon">✉️</div>
         <div>
-          <div class="contact-info-label">Email</div>
-          <div class="contact-info-value"><span class="__cf_email__" data-cfemail="5037223138313d383522242a6710373d31393c7e333f3d">[email&#160;protected]</span></div>
+          <div class="contact-label">Email</div>
+          <div class="contact-val">grahamhertz7@gmail.com</div>
         </div>
       </a>
-      <div class="contact-info-block">
-        <div class="contact-info-icon">📍</div>
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
         <div>
-          <div class="contact-info-label">Location</div>
-          <div class="contact-info-value">Bay Area, California</div>
+          <div class="contact-label">Location</div>
+          <div class="contact-val">Bay Area, California</div>
         </div>
       </div>
-      <div class="contact-info-block">
-        <div class="contact-info-icon">⚡</div>
+      <div class="contact-item">
+        <div class="contact-icon">⚡</div>
         <div>
-          <div class="contact-info-label">Response Time</div>
-          <div class="contact-info-value">Within 24 hours — guaranteed</div>
+          <div class="contact-label">Response Time</div>
+          <div class="contact-val">Within 24 hours — guaranteed</div>
         </div>
       </div>
     </div>
-
-    <div class="reveal reveal-delay-1">
-      <div class="contact-form">
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">Your Name</label>
-            <input type="text" class="form-input" placeholder="Jane Smith">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Business Name</label>
-            <input type="text" class="form-input" placeholder="Smith's Bakery">
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Email</label>
-          <input type="email" class="form-input" placeholder="jane@yourbusiness.com">
-        </div>
-        <div class="form-group">
-          <label class="form-label">Phone (optional)</label>
-          <input type="tel" class="form-input" placeholder="(925) 000-0000">
-        </div>
-        <div class="form-group">
-          <label class="form-label">Type of Business</label>
-          <select class="form-select form-input">
-            <option value="">Select your industry...</option>
-            <option>Restaurant / Food & Drink</option>
-            <option>Retail / Shop</option>
-            <option>Service Business</option>
-            <option>Health & Wellness</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Tell me about your business</label>
-          <textarea class="form-textarea" placeholder="What does your business do? Do you currently have a website? What are you looking for?"></textarea>
-        </div>
-        <button class="form-submit" onclick="handleSubmit(event)">Send My Request →</button>
+    <div class="contact-form">
+      <div class="form-row">
+        <div class="form-group"><label>Your Name</label><input type="text" placeholder="Jane Smith"></div>
+        <div class="form-group"><label>Business Name</label><input type="text" placeholder="Jane&#39;s Tacos"></div>
       </div>
+      <div class="form-row">
+        <div class="form-group"><label>Email</label><input type="email" placeholder="jane@example.com"></div>
+        <div class="form-group"><label>Phone (optional)</label><input type="tel" placeholder="(555) 000-0000"></div>
+      </div>
+      <div class="form-group">
+        <label>Type of Business</label>
+        <select>
+          <option value="">Select your industry...</option>
+          <option>Restaurant / Food &amp; Drink</option>
+          <option>Retail / Shop</option>
+          <option>Service Business</option>
+          <option>Health &amp; Wellness</option>
+          <option>Real Estate</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Interested In</label>
+        <select>
+          <option value="">Select a package...</option>
+          <option>Essential — $399</option>
+          <option>Pro — $699</option>
+          <option>Elite — $999</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Tell me about your business</label><textarea placeholder="What do you do, who are your customers, what do you need from your website?"></textarea></div>
+      <button class="form-submit">Send My Request →</button>
     </div>
   </div>
 </section>
@@ -1012,82 +529,44 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">Hertz<span>Web</span>Co.</div>
-  <div class="footer-tagline">Every business deserves a great website.</div>
+  <div class="footer-copy">Every business deserves a great website.</div>
   <div class="footer-copy">© 2025 Hertz Web Co. · Graham Hertz · Bay Area, CA</div>
 </footer>
 
-<!-- LIVE CHAT BUBBLE -->
-<div id="chat-bubble" style="position:fixed; bottom:2rem; left:2rem; z-index:500;">
-  <!-- Bubble button -->
-  <button onclick="toggleChat()" style="width:56px; height:56px; background:var(--accent); border:none; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 20px rgba(37,99,235,0.4); transition:transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 8px 30px rgba(37,99,235,0.5)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 20px rgba(37,99,235,0.4)'">
-    <span id="chat-icon" style="font-size:1.4rem;">💬</span>
-  </button>
-
-  <!-- Chat panel -->
-  <div id="chat-panel" style="display:none; position:absolute; bottom:70px; left:0; width:280px; background:var(--white); border:1px solid var(--border); border-radius:16px; box-shadow:0 20px 60px rgba(10,10,10,0.15); overflow:hidden; animation: fadeUp 0.3s ease;">
-    <!-- Header -->
-    <div style="background:var(--accent); padding:1.2rem 1.5rem; display:flex; align-items:center; gap:0.8rem;">
-      <div style="width:36px; height:36px; background:rgba(255,255,255,0.2); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Syne',sans-serif; font-weight:800; color:white; font-size:0.85rem;">GH</div>
+<!-- CHAT BUBBLE -->
+<div id="chat-bubble">
+  <button id="chat-toggle" onclick="toggleChat()">💬</button>
+  <div id="chat-panel" style="display: none;">
+    <div class="chat-header">
+      <div class="chat-avatar">GH</div>
       <div>
-        <div style="font-family:'Syne',sans-serif; font-weight:700; color:white; font-size:0.9rem;">Graham Hertz</div>
-        <div style="font-size:0.7rem; color:rgba(255,255,255,0.8);">Hertz Web Co. · Usually replies fast</div>
+        <div class="chat-name">Graham Hertz</div>
+        <div class="chat-status">Hertz Web Co. · Usually replies fast</div>
       </div>
     </div>
-    <!-- Message -->
-    <div style="padding:1.5rem;">
-      <div style="background:var(--mist); border-radius:12px 12px 12px 4px; padding:0.9rem 1.1rem; font-size:0.88rem; color:var(--black); line-height:1.6; margin-bottom:1.2rem;">
-        👋 Hey! Ready to get your business online? Reach out and I'll get back to you fast.
+    <div class="chat-body">
+      <div class="chat-bubble-msg">👋 Hey! Ready to get your business online? Reach out and I'll get back to you fast.</div>
+      <div class="chat-actions">
+        <a href="sms:+19258768014" class="chat-action">💬 Text Me — (925) 876-8014</a>
+        <a href="mailto:grahamhertz7@gmail.com" class="chat-action">✉️ Email Me</a>
       </div>
-      <!-- Buttons -->
-      <a href="sms:+19258768014" style="display:flex; align-items:center; gap:0.7rem; background:var(--black); color:white; padding:0.75rem 1rem; border-radius:8px; text-decoration:none; font-size:0.82rem; font-weight:600; margin-bottom:0.6rem; transition:background 0.2s;" onmouseover="this.style.background='var(--accent)'" onmouseout="this.style.background='var(--black)'">
-        <span>💬</span> Text Me — (925) 876-8014
-      </a>
-      <a href="mailto:grahamhertz7@gmail.com" style="display:flex; align-items:center; gap:0.7rem; background:var(--mist); color:var(--black); padding:0.75rem 1rem; border-radius:8px; text-decoration:none; font-size:0.82rem; font-weight:600; border:1.5px solid var(--border); transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
-        <span>✉️</span> Email Me
-      </a>
     </div>
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Scroll reveal
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  reveals.forEach(el => observer.observe(el));
-
-  // Chat bubble toggle
+<script>
+  // Chat toggle
   function toggleChat() {
     const panel = document.getElementById('chat-panel');
-    const icon = document.getElementById('chat-icon');
-    const isOpen = panel.style.display === 'block';
-    panel.style.display = isOpen ? 'none' : 'block';
-    icon.textContent = isOpen ? '💬' : '✕';
+    panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
   }
 
-  // Close chat when clicking outside
-  document.addEventListener('click', function(e) {
-    const bubble = document.getElementById('chat-bubble');
-    if (!bubble.contains(e.target)) {
-      document.getElementById('chat-panel').style.display = 'none';
-      document.getElementById('chat-icon').textContent = '💬';
-    }
-  });
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
 
-  // Form submit handler
-  function handleSubmit(e) {
-    e.preventDefault();
-    const name = document.querySelector('input[placeholder="Jane Smith"]').value;
-    const business = document.querySelector('input[placeholder="Smith\'s Bakery"]').value;
-    const email = document.querySelector('input[placeholder="jane@yourbusiness.com"]').value;
-    const phone = document.querySelector('input[placeholder="(925) 000-0000"]').value;
-    const industry = document.querySelector('select').value;
-    const message = document.querySelector('textarea').value;
 
-    const subject = encodeURIComponent(`Website Request from ${name} — ${business}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nBusiness: ${business}\nEmail: ${email}\nPhone: ${phone}\nIndustry: ${industry}\n\nMessage:\n${message}`
-  
-
-      <elevenlabs-convai agent-id="agent_1501kp9h21mzf2jr96s88w9w9jyb"></elevenlabs-convai><script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+</body></html>
